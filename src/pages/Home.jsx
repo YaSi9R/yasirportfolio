@@ -54,7 +54,7 @@ const Home = ({ theme, toggleTheme }) => {
                     ))}
                 </div>
                 <motion.div style={{ y: parallaxY }} className="container px-4 md:px-6 w-full">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -144,6 +144,10 @@ const Home = ({ theme, toggleTheme }) => {
                                 >
                                     <Linkedin className="h-5 w-5" />
                                 </motion.a>
+
+                                <div className="absolute bottom-10 left-[400px] buttom-[10px]  hidden md:block">
+                                    <RotatingCube />
+                                </div>
                             </div>
                         </motion.div>
 
@@ -156,9 +160,8 @@ const Home = ({ theme, toggleTheme }) => {
                         >
                             <div className="relative">
                                 <MernSpaceVisualization />
-                                <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 hidden ">
-                                    <RotatingCube />
-                                </div>
+
+
                             </div>
                         </motion.div>
                     </div>
