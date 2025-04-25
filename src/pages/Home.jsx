@@ -27,7 +27,7 @@ const Home = ({ theme, toggleTheme }) => {
 
     return (
 
-        <div ref={containerRef}>
+        <div ref={containerRef} className="md:px-[50px]  ">
             {/* Hero Section */}
             <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none">
@@ -53,7 +53,7 @@ const Home = ({ theme, toggleTheme }) => {
                         />
                     ))}
                 </div>
-                <motion.div style={{ y: parallaxY }} className="container px-4 md:px-6 w-full">
+                <motion.div style={{ y: parallaxY }} className="container max-md:pt-[25px] px-4 md:px-6 w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -100 }}
@@ -70,13 +70,13 @@ const Home = ({ theme, toggleTheme }) => {
                                         <span className="text-red-500">JAVA Developer</span>
                                     </span>
                                 </div>
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter  max-md:pt-[10px]">
                                     Hi! I'm{" "}
                                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
                                         {userData?.name || "Developer"}
                                     </span>
                                 </h1>
-                                <div className="text-xl md:text-2xl font-medium text-muted-foreground h-8">
+                                <div className="text-xl md:text-2xl font-medium text-muted-foreground h-8  max-md:pt-[10px]">
                                     <TypeAnimation
                                         sequence={[
                                             "I am a MERN Stack Developer",
@@ -95,13 +95,13 @@ const Home = ({ theme, toggleTheme }) => {
                                         repeat={Number.POSITIVE_INFINITY}
                                     />
                                 </div>
-                                <p className="text-muted-foreground max-w-[600px]">
+                                <p className="text-muted-foreground max-w-[600px]  max-md:pt-[20px]">
                                     {userData?.bio ||
                                         "I'm a software developer specializing in building exceptional digital experiences with the MERN stack."}
                                 </p>
                             </div>
 
-                            <div className="flex flex-wrap gap-3">
+                            <div className=" max-md:pt-[20px] flex flex-wrap gap-3">
                                 <button className="relative overflow-hidden group px-4 py-2 bg-primary text-white rounded-md">
                                     <span className="relative z-10">Download CV</span>
                                     <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -113,7 +113,7 @@ const Home = ({ theme, toggleTheme }) => {
                                 </button>
                             </div>
 
-                            <div className="flex items-center gap-4 pt-4">
+                            <div className="flex items-center gap-4 pt-4  pb-[50px]">
                                 <motion.a
                                     href={userData?.social?.github || "https://github.com"}
                                     target="_blank"
@@ -145,9 +145,21 @@ const Home = ({ theme, toggleTheme }) => {
                                     <Linkedin className="h-5 w-5" />
                                 </motion.a>
 
-                                <div className="absolute bottom-10 left-[400px] buttom-[10px]  hidden md:block">
+                                <motion.div
+                                    className="absolute bottom-3 left-[410px] transform -translate-x-1/2"
+                                    animate={{
+                                        x: [0, 100, 0, -100, 0],
+                                        y: [0, -100, -200, -100, 0],
+                                    }}
+                                    transition={{
+                                        duration: 6,
+                                        repeat: Infinity,
+                                        ease: "linear"
+                                    }}
+                                >
                                     <RotatingCube />
-                                </div>
+                                </motion.div>
+
                             </div>
                         </motion.div>
 

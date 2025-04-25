@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Routes, Route} from "react-router-dom"
 // import CircularCube from "./components/CircularCube"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import "./App.css"
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
          
         </Routes>
+        <Footer/>
 
 
  {/* <Route path="/about" element={<About />} />

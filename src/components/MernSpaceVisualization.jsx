@@ -287,13 +287,45 @@ const MernSpaceVisualization = () => {
 
       {/* MERN Stack label */}
       <motion.div
-        className="absolute -top-6 -right-6 bg-background/80 backdrop-blur-sm p-3 rounded-xl border border-border/50 shadow-lg"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        className="absolute -top-6 -right-1 bg-background/80 backdrop-blur-sm p-3 rounded-xl border border-border/50 shadow-lg"
+        initial={{ x: 80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <div className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
           MERN Stack Developer
+        </div>
+      </motion.div>
+      <motion.div
+        className="absolute top-[400px] left-[50px] bg-background/80 backdrop-blur-sm p-3 rounded-xl border border-border/50 shadow-lg"
+        initial={{ x: -80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        <div className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
+          Frontend Developer
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[140px] left-[20px] bg-background/80 backdrop-blur-sm p-3 rounded-xl border border-border/50 shadow-lg"
+        initial={{ x: -80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        <div className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
+          JAVA Developer
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[230px] right-[20px] bg-background/80 backdrop-blur-sm p-3 rounded-xl border border-border/50 shadow-lg"
+        initial={{ x: 80, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        <div className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
+          Backend Developer
         </div>
       </motion.div>
     </div>
