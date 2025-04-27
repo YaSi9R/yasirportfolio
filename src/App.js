@@ -16,9 +16,7 @@ function App() {
     document.documentElement.className = newTheme
   }
   return (
-   <h1>
-    hello
-   </h1>
+   
       <div className={`min-h-screen transition-colors duration-300 ${theme}`}>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         
